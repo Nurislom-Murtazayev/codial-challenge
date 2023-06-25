@@ -1,0 +1,82 @@
+header {
+  width: 100%;
+  position: relative;
+  .ovals {
+    position: absolute;
+    top: 133px;
+  }
+  nav {
+    width: 100%;
+    padding-top: 39px;
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .socials {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+  }
+  .banner {
+    width: 100%;
+    margin-top: 127px;
+    .container {
+      display: flex;
+    }
+    .hero-text {
+      h1 {
+        @include font(700, 88px, 88px);
+        letter-spacing: -2.5px;
+        color: var(--white);
+        span {
+          &::after {
+            content: "";
+            display: block;
+            background-color: var(--green);
+            width: 492px;
+            height: 6px;
+            margin-left: 138px;
+          }
+        }
+      }
+      p {
+        width: 445px;
+        margin-top: 43px;
+        @include font(500, 18px, 28px);
+        color: var(--grey);
+      }
+      a {
+        display: block;
+        margin-top: 66px;
+        color: var(--white);
+        @include font(700, 16px, 26px);
+        letter-spacing: 2.286px;
+        &::after {
+          content: "";
+          display: block;
+          width: 120px;
+          height: 2px;
+          background-color: var(--green);
+          margin-top: 10px;
+        }
+      }
+    }
+    .hero-img {
+      position: relative;
+      .man-img {
+        position: absolute;
+        top: -201px;
+        z-index: -2;
+      }
+      .oval {
+        width: 129px;
+        height: 129px;
+        position: absolute;
+        top: 300px;
+        left: -64.5px;
+      }
+    }
+  }
+}

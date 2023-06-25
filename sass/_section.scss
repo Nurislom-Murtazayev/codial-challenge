@@ -1,0 +1,39 @@
+.section {
+  width: 100%;
+  margin-top: 208px;
+  position: relative;
+  .ovals-2 {
+    position: absolute;
+    right: 0;
+    top: 252px;
+  }
+  .container {
+    padding-top: 72px;
+    border-top: 1px solid var(--white);
+  }
+  .items {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    .item {
+      width: 345px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 14px;
+      h2 
+      {
+        color: var(--white);
+        @include font(700,48px,56px);
+        letter-spacing: -1.5px;
+      }
+      p 
+      {
+        color: var(--grey);
+        @include font(500,18px,28px);
+      }
+    }
+  }
+}

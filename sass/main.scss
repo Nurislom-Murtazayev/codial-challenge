@@ -1,0 +1,185 @@
+@import "font";
+@import "mixins";
+@import "var";
+
+@import "header";
+@import "section";
+@import "projects";
+@import "footer";
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Space Grotesk", sans-serif;
+  list-style: none;
+  font-style: normal;
+}
+
+body {
+  background: var(--black);
+}
+
+.container {
+  max-width: 1440px;
+  width: 1150px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+
+@media screen and (max-width: 768px) {
+    .container
+    {
+        width: 100% !important;
+    }
+  header {
+    width: 100%;
+    .ovals {
+      top: 102px;
+      left: -174px;
+    }
+    .banner {
+        width: 100%;
+      margin-top: 90px;
+      .hero-text {
+        h1 {
+          @include font(700, 72px, 72px);
+          span {
+            &::after {
+              display: none;
+            }
+          }
+        }
+        p {
+          font-size: 18px;
+        }
+        a {
+          margin-top: 34px;
+        }
+      }
+      .hero-img {
+        .man-img {
+          width: 322px;
+          right: -20px;
+          height: 600px;
+        }
+        .oval {
+          display: none;
+        }
+      }
+    }
+  }
+  .section {
+    width: 100%;
+    margin-top: 60px;
+    .items 
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .item 
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    .ovals-2 {
+      right: -109px;
+      top: 376px;
+    }
+  }
+  .projetcs-section {
+    .projetcs-top {
+      width: 100%;
+      h1 {
+        @include font(700, 72px, 72px);
+      }
+    }
+    .projects {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      .project {
+        height: 458px;
+        width: 342px;
+        gap: 21px;
+        img {
+          width: 100%;
+          height: 253px;
+        }
+        .project-view {
+          width: 100%;
+          height: 253px;
+        }
+      }
+    }
+  }
+  footer {
+    height: auto;
+    .ovals-3 {
+      top: 585px;
+      left: -142px;
+    }
+    .footer-main {
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 45px;
+      }
+      .footer-text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        p {
+          text-align: center;
+        }
+      }
+    }
+    .footer-nav 
+    {
+        width: 100%;
+        .container
+        {
+            width: 100%;
+            padding: 40px 20px;
+        }
+    }
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .container {
+    width: 100% !important; 
+  }
+  header {
+    width: 100%;
+    nav {
+      width: 100%;
+    }
+    .banner {
+      .hero-text {
+        width: calc(100% - 322px);
+      }
+      .hero-img {
+        width: 100%;
+      }
+    }
+  }
+  .section {
+    width: 100%;
+  }
+  .projetcs-section {
+    width: 100%;
+  }
+  footer {
+    width: 100%;
+  }
+}
