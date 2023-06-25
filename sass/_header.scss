@@ -53,6 +53,11 @@ header {
         color: var(--white);
         @include font(700, 16px, 26px);
         letter-spacing: 2.286px;
+        transition: 0.2s linear;
+        &:hover 
+        {
+          color: var(--green);
+        }
         &::after {
           content: "";
           display: block;
